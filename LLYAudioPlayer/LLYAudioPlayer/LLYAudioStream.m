@@ -54,14 +54,47 @@
 
 - (void)getSeekToOffset:(double)seekToTime{
     
+    self.seekByteOffset = dataOffset +
+    (seekToTime / self.duration) * (_audioProperty.fileSize - dataOffset);
+    
+    if (self.seekByteOffset > _audioProperty.fileSize - 2 * _audioProperty.packetMaxSize){
+        self.seekByteOffset = _audioProperty.fileSize - 2 * _audioProperty.packetMaxSize;
+    }
+    self.seekTime = seekToTime;
+    isSeeking=YES;
 }
 
 - (void)close{
     
     shouldExit = YES;
-    
 }
 
+-(double)duration{
+    double calculatedBitRate = [self calculatedBitRate];
+    
+    if (calculatedBitRate == 0 || _audioProperty.fileSize == 0)
+    {
+        return 0.0;
+    }
+    
+    return (_audioProperty.fileSize-dataOffset) / (calculatedBitRate * 0.125);
+}
+
+- (double)calculatedBitRate
+{
+    if (packetDuration && packetCount > BitRateEstimationMinPackets)
+    {
+        double averagePacketByteSize = packetDataSize / packetCount;
+        return 8.0 * averagePacketByteSize / packetDuration;
+    }
+    
+    if (bitRate)
+    {
+        return (double)bitRate;
+    }
+    
+    return 0;
+}
 #pragma mark - callback
 
 void PropertyListenCallback(void *inClientData,
