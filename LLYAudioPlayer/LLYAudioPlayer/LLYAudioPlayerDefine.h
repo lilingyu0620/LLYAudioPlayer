@@ -11,7 +11,7 @@
 #ifndef LLYAudioPlayerDefine_h
 #define LLYAudioPlayerDefine_h
 
-#define Num_Buffers 16 //缓冲区数量
+#define Num_Buffers 3 //缓冲区数量
 #define Num_Descs 512 //复用的包描述数量
 #define Size_DefaultBufferSize 2048 //默认缓冲区大小
 

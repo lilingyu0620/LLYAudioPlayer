@@ -56,6 +56,7 @@
         fileSize = [[fileAttDic objectForKey:NSFileSize] longValue];
         if (fileSize > 0) {
             self.audioProperty.fileSize = fileSize;
+            filehandle = [NSFileHandle fileHandleForReadingAtPath:self.urlStr];
             do {
                 if (exit) {
                     [filehandle closeFile];
