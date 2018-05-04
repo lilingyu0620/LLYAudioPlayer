@@ -13,11 +13,11 @@
 
 @implementation LLYAudioStream{
     AudioFileStreamID audioFileStreamID;
-    NSInteger packetCount;
-    NSInteger packetDataSize;
-    NSInteger bitRate;
-    NSInteger dataOffset;
-    double packetDuration;
+    NSInteger packetCount;//当前已读取了多少个packet
+    NSInteger packetDataSize;//当前已读取的packet的总文件大小 （这两个变量用来计算平均码率）
+    NSInteger bitRate;//码率
+    NSInteger dataOffset;//获取音频数据在文件中的起始位置，因为音频数据前面会有头文件。
+    double packetDuration;//每个packet的时长
     BOOL isSeeking;
     BOOL shouldExit;
 }

@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 @property (weak, nonatomic) IBOutlet UISlider *audioSlider;
+@property (weak, nonatomic) IBOutlet UIButton *stopBtn;
 
 @property (nonatomic, strong) NSTimer *audioTimer;
 @end
@@ -57,16 +58,22 @@
     self.audioPlayer = [[LLYAudioPlayer alloc] init];
     self.audioPlayer.delegate = self;
     [self.audioPlayer playWithUrl:path];
-
-//    //需要放到子线程
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-//    });
 }
 
 - (IBAction)playNetAudioSource:(id)sender {
 }
 
 - (IBAction)stop:(id)sender {
+    
+    [self.audioPlayer stop];
+}
+- (IBAction)goonPlay:(id)sender {
+    
+    [self.audioPlayer play];
+}
+- (IBAction)pauseBtnClicked:(id)sender {
+    
+    [self.audioPlayer pause];
 }
 
 - (IBAction)seekComplete:(id)sender {

@@ -12,9 +12,9 @@
     NSFileHandle *filehandle;
     NSInteger readLength;
     UInt64 fileSize;
-    UInt64 currOffset;
+    UInt64 currOffset;//当前读取了多少音频数据
     NSTimer *fileTimer;
-    BOOL isContine;//是否接着前一帧的数据播放seek的时候需要用到
+    BOOL isContine;//是否接着前一帧的数据播放seek的时候需要用到，默认为yes
     UInt64 newOffset;
     BOOL exit;
     NSData *audioFileData;//每次读取到的文件数据

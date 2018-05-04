@@ -14,12 +14,12 @@
     AudioStreamBasicDescription llyAudioDesc;
     AudioQueueRef audioQueue;
     AudioQueueBufferRef audioQueueBuffer[Num_Buffers];
-    bool inuse[Num_Buffers];
+    bool inuse[Num_Buffers];//标记当前buffer是否正在被使用
     AudioStreamPacketDescription bufferDescs[Num_Descs];
-    UInt32 bufferSize;
-    UInt32 currBufferIndex;
-    UInt32 currBufferFillOffset;
-    UInt32 currBufferPacketCount;
+    UInt32 bufferSize;//每个buffer的大小
+    UInt32 currBufferIndex;//当前使用的buffer的索引
+    UInt32 currBufferFillOffset;//当前buffer已填充的数据量
+    UInt32 currBufferPacketCount;//当前是第几个packet
     
     NSLock *mLock;
     
@@ -58,7 +58,12 @@
 }
 
 - (void)stop{
+    
     _audioProperty.status = LLYAudioStatus_Stop;
+    
+    [self p_audioStop];
+    
+    [self p_cleanUp];
 }
 
 - (void)seeked{
@@ -169,7 +174,17 @@
             [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
             [[AVAudioSession sharedInstance] setActive:YES error:nil];
             
+            OSStatus error = AudioQueueStart(audioQueue, NULL);
+            if (error != noErr) {
+                [_audioProperty error:LLYAudioError_AQ_StartFail];
+                return;
+            }
+            
             isStart = YES;
+            
+            if (_audioProperty.status != LLYAudioStatus_Playing) {
+                _audioProperty.status = LLYAudioStatus_Playing;
+            }
         }
     }
 }
@@ -184,10 +199,43 @@
                 [self.audioProperty error:LLYAudioError_AQ_PauseFail];
                 return;
             }
-            isStart=NO;
+            isStart = NO;
         }
     }
 }
+
+- (void)p_audioStop{
+    @synchronized(self)
+    {
+        if (audioQueue) {
+            
+            isStart = NO;
+            
+            OSStatus status= AudioQueueStop(audioQueue, true);
+            if (status!=noErr)
+            {
+                [self.audioProperty error:LLYAudioError_AQ_StopFail];
+                return;
+            }
+        }
+        
+    }
+}
+
+- (void)p_cleanUp{
+    if (audioQueue) {
+//        AudioQueueRemovePropertyListener(audioQueue, kAudioQueueProperty_IsRunning, audioQueueIsRunningCallback, (__bridge void *)(self));
+        for (NSInteger i = 0;i < Num_Buffers;i++) {
+            AudioQueueFreeBuffer(audioQueue, audioQueueBuffer[i]);
+        }
+        AudioQueueDispose(audioQueue, true);
+        audioQueue=NULL;
+    }
+    currBufferPacketCount=0;
+    currBufferFillOffset=0;
+    currBufferIndex=0;
+}
+
 
 - (void)p_putBufferToQueue{
     
@@ -206,14 +254,14 @@
         return;
     }
     
-    if (_audioProperty.status != LLYAudioStatus_Playing) {
-        _audioProperty.status = LLYAudioStatus_Playing;
-    }
+//    if (_audioProperty.status != LLYAudioStatus_Playing) {
+//        _audioProperty.status = LLYAudioStatus_Playing;
+//    }
     
-    error = AudioQueueStart(audioQueue, NULL);
-    if (error != noErr) {
-        [_audioProperty error:LLYAudioError_AQ_StartFail];
-        return;
+    if (!isStart && _audioProperty.status != LLYAudioStatus_Paused) {
+        
+        [self start];
+
     }
     
     currBufferIndex = ++currBufferIndex % Num_Buffers;
