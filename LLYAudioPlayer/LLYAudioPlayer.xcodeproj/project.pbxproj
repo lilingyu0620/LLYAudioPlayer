@@ -21,6 +21,7 @@
 		0A694F872099B0D900694E35 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A694F862099B0D900694E35 /* AVFoundation.framework */; };
 		0A694F8A2099B3B600694E35 /* LLYAudioProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F892099B3B600694E35 /* LLYAudioProperty.m */; };
 		0A694F8E2099C19600694E35 /* LLYAudioError.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A694F8D2099C19600694E35 /* LLYAudioError.plist */; };
+		0A778EB4209C4E4C001F073D /* LLYNetAudioSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A778EB3209C4E4C001F073D /* LLYNetAudioSource.m */; };
 		0A79074C209AA24E004DAE36 /* LLYAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A79074B209AA24E004DAE36 /* LLYAudioStream.m */; };
 		0A79074F209ABCA5004DAE36 /* LLYAudioQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A79074E209ABCA5004DAE36 /* LLYAudioQueue.m */; };
 		0A790752209AF0D5004DAE36 /* LLYAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A790751209AF0D5004DAE36 /* LLYAudioPlayer.m */; };
@@ -72,6 +73,8 @@
 		0A694F8B2099B68100694E35 /* LLYAudioPlayerDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAudioPlayerDefine.h; sourceTree = "<group>"; };
 		0A694F8C2099B72200694E35 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0A694F8D2099C19600694E35 /* LLYAudioError.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LLYAudioError.plist; sourceTree = "<group>"; };
+		0A778EB2209C4E4C001F073D /* LLYNetAudioSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYNetAudioSource.h; sourceTree = "<group>"; };
+		0A778EB3209C4E4C001F073D /* LLYNetAudioSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYNetAudioSource.m; sourceTree = "<group>"; };
 		0A79074A209AA24E004DAE36 /* LLYAudioStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAudioStream.h; sourceTree = "<group>"; };
 		0A79074B209AA24E004DAE36 /* LLYAudioStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAudioStream.m; sourceTree = "<group>"; };
 		0A79074D209ABCA5004DAE36 /* LLYAudioQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAudioQueue.h; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				0A694F7E2099AF6F00694E35 /* LLYBaseAudioSource.m */,
 				0A694F802099AFB500694E35 /* LLYLocalAudioSource.h */,
 				0A694F812099AFB500694E35 /* LLYLocalAudioSource.m */,
+				0A778EB2209C4E4C001F073D /* LLYNetAudioSource.h */,
+				0A778EB3209C4E4C001F073D /* LLYNetAudioSource.m */,
 				0A79074A209AA24E004DAE36 /* LLYAudioStream.h */,
 				0A79074B209AA24E004DAE36 /* LLYAudioStream.m */,
 				0A79074D209ABCA5004DAE36 /* LLYAudioQueue.h */,
@@ -338,6 +343,7 @@
 				0A694F822099AFB500694E35 /* LLYLocalAudioSource.m in Sources */,
 				0A694F5B2099AD9600694E35 /* main.m in Sources */,
 				0A79074C209AA24E004DAE36 /* LLYAudioStream.m in Sources */,
+				0A778EB4209C4E4C001F073D /* LLYNetAudioSource.m in Sources */,
 				0A694F7F2099AF6F00694E35 /* LLYBaseAudioSource.m in Sources */,
 				0A694F4D2099AD9600694E35 /* AppDelegate.m in Sources */,
 			);

@@ -23,6 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="seekComplete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Te-e6-iiu"/>
+                                    <action selector="seeking:" destination="BYZ-38-t0r" eventType="touchDragInside" id="0ZD-rr-Il7"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHu-wj-Ve3">
@@ -95,7 +96,6 @@
                         <outlet property="currentTimeLabel" destination="hHu-wj-Ve3" id="Ncv-I0-3Hd"/>
                         <outlet property="durationLabel" destination="iAS-2O-MLd" id="7pW-TM-J0V"/>
                         <outlet property="statusLabel" destination="H0r-tk-Vrs" id="2kw-LR-asg"/>
-                        <outlet property="stopBtn" destination="Mzh-OI-BjF" id="TjS-gv-YgP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -86,13 +86,17 @@
                 return;
             }
             
+            if (_audioProperty.status == LLYAudioStatus_Stop) {
+                return;
+            }
+            
             AudioStreamPacketDescription packetDesc = inPacketDescs[i];
             if (currBufferFillOffset + packetDesc.mDataByteSize >= bufferSize) {
-                NSLog(@"当前buffer_%u已经满了，送给audioqueue去播吧",(unsigned int)currBufferIndex);
+//                NSLog(@"当前buffer_%u已经满了，送给audioqueue去播吧",(unsigned int)currBufferIndex);
                 [self p_putBufferToQueue];
             }
             
-            NSLog(@"给当前buffer_%u填装数据中",(unsigned int)currBufferIndex);
+//            NSLog(@"给当前buffer_%u填装数据中",(unsigned int)currBufferIndex);
             AudioQueueBufferRef outBufferRef = audioQueueBuffer[currBufferIndex];
             memcpy(outBufferRef->mAudioData + currBufferFillOffset, data.bytes + packetDesc.mStartOffset,packetDesc.mDataByteSize);
             outBufferRef->mAudioDataByteSize = currBufferFillOffset+packetDesc.mDataByteSize;
@@ -276,7 +280,7 @@
         if (inBuffer == audioQueueBuffer[i]) {
             [mLock lock];
             inuse[i] = NO;
-            NSLog(@"当前buffer_%d的数据已经播放完了 还给程序继续装数据去吧！！！！！！",i);
+//            NSLog(@"当前buffer_%d的数据已经播放完了 还给程序继续装数据去吧！！！！！！",i);
             [mLock unlock];
         }
     }

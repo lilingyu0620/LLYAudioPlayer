@@ -11,6 +11,7 @@
 #import "LLYLocalAudioSource.h"
 #import "LLYAudioQueue.h"
 #import "LLYAudioStream.h"
+#import "LLYNetAudioSource.h"
 
 @interface LLYAudioPlayer ()<LLYAudioSourceDelegate,LLYAudioStreamDelegate,LLYAudioPropertyDelegate>
 
@@ -36,9 +37,9 @@
     
     LLYBaseAudioSource *audioSource;
     if([urlStr.lowercaseString hasPrefix:@"http"]){
-        
+        audioSource = [[LLYNetAudioSource alloc]init];
     }else{
-        audioSource=[[LLYLocalAudioSource alloc] init];
+        audioSource = [[LLYLocalAudioSource alloc]init];
     }
     audioSource.urlStr = urlStr;
     

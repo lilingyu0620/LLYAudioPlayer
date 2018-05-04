@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 @property (weak, nonatomic) IBOutlet UISlider *audioSlider;
-@property (weak, nonatomic) IBOutlet UIButton *stopBtn;
 
 @property (nonatomic, strong) NSTimer *audioTimer;
 @end
@@ -31,7 +30,23 @@
     self.currentTimeLabel.text = @"00:00";
     self.durationLabel.text = @"00:00";
     self.audioSlider.value = 0;
+}
+
+- (void)startTimer{
     
+    [self stopTimer];
+    
+    self.audioTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timer_Interval) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.audioTimer forMode:NSRunLoopCommonModes];
+
+}
+
+- (void)stopTimer{
+    
+    if ([self.audioTimer isValid]) {
+        [self.audioTimer invalidate];
+        self.audioTimer = nil;
+    }
 }
 
 -(void)timer_Interval{
@@ -46,14 +61,13 @@
 
 - (IBAction)playLocalAudioSource:(id)sender {
     
-    if ([self.audioTimer isValid]) {
-        [self.audioTimer invalidate];
-        self.audioTimer = nil;
+    
+    [self startTimer];
+    
+    if (self.audioPlayer) {
+        self.audioPlayer = nil;
     }
     
-    self.audioTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(timer_Interval) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.audioTimer forMode:NSRunLoopCommonModes];
-
     NSString *path = [[NSBundle mainBundle] pathForResource:@"平凡之路" ofType:@"mp3"];
     self.audioPlayer = [[LLYAudioPlayer alloc] init];
     self.audioPlayer.delegate = self;
@@ -61,6 +75,18 @@
 }
 
 - (IBAction)playNetAudioSource:(id)sender {
+    
+    
+    [self startTimer];
+    
+    if (self.audioPlayer) {
+        self.audioPlayer = nil;
+    }
+    
+    NSString *path = @"http://nos.netease.com/test-open-audio/nos/mp3/2018/04/17/ZDEMHSRKH_shd.mp3";
+    self.audioPlayer = [[LLYAudioPlayer alloc] init];
+    self.audioPlayer.delegate = self;
+    [self.audioPlayer playWithUrl:path];
 }
 
 - (IBAction)stop:(id)sender {
@@ -77,10 +103,17 @@
 }
 
 - (IBAction)seekComplete:(id)sender {
-    NSLog(@"seekkkkk");
+    NSLog(@"seeked");
+    [self startTimer];
     
     [self.audioPlayer seekToTime:self.audioSlider.value];
 
+}
+- (IBAction)seeking:(id)sender {
+    
+    NSLog(@"seekinggggggggggg");
+    [self stopTimer];
+    
 }
 
 
