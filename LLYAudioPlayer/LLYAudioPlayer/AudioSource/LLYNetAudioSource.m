@@ -8,8 +8,9 @@
 
 #import "LLYNetAudioSource.h"
 #import "LLYHttpSessionManager.h"
+#import "LLYFileManager.h"
 
-@interface LLYNetAudioSource ()<NSURLSessionDataDelegate>{
+@interface LLYNetAudioSource (){
     BOOL isContine;
     UInt64 fileSize;
     UInt64 seekOffset;
@@ -57,6 +58,7 @@
                 isContine = NO;
             }
             [self.delegate audioSource_dataArrived:self data:data contine:isContine];
+            
             currDataSize = currDataSize + data.length;
             if (!isContine) {
                 isContine = YES;
@@ -76,8 +78,11 @@
         }
         
         self.audioTask = [[LLYHttpSessionManager shareInstance] requestAUDIOWithMethod:LLYHttpMethod_GET urlString:self.urlStr parameters:nil progress:^(NSProgress * _Nullable downloadProgress) {
-            
+            NSLog(@"totalunit = %lld,completeunit = %lld",downloadProgress.totalUnitCount,downloadProgress.completedUnitCount);
         } success:^(NSURLSessionDataTask * _Nullable task, id  _Nullable responseObject) {
+
+            NSString *path = [LLYFileManager pathWithUrl:self.urlStr];
+            [LLYFileManager saveFileWithPath:path fileObject:responseObject];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error) {
             

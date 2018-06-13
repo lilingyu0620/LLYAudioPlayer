@@ -18,6 +18,8 @@
 		0A4D795C20D0D3A100FD4FB8 /* LLYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D795B20D0D3A100FD4FB8 /* LLYHomeViewController.m */; };
 		0A4D796020D0D60600FD4FB8 /* LLYPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D795E20D0D60600FD4FB8 /* LLYPlayerViewController.m */; };
 		0A4D796120D0D60600FD4FB8 /* LLYPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4D795F20D0D60600FD4FB8 /* LLYPlayerViewController.xib */; };
+		0A4D796420D0EC9100FD4FB8 /* LLYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D796320D0EC9100FD4FB8 /* LLYFileManager.m */; };
+		0A4D796720D0EEE000FD4FB8 /* LLYEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D796620D0EEE000FD4FB8 /* LLYEncryption.m */; };
 		0A694F4D2099AD9600694E35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F4C2099AD9600694E35 /* AppDelegate.m */; };
 		0A694F502099AD9600694E35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F4F2099AD9600694E35 /* ViewController.m */; };
 		0A694F532099AD9600694E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A694F512099AD9600694E35 /* Main.storyboard */; };
@@ -73,6 +75,10 @@
 		0A4D795D20D0D60600FD4FB8 /* LLYPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYPlayerViewController.h; sourceTree = "<group>"; };
 		0A4D795E20D0D60600FD4FB8 /* LLYPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYPlayerViewController.m; sourceTree = "<group>"; };
 		0A4D795F20D0D60600FD4FB8 /* LLYPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLYPlayerViewController.xib; sourceTree = "<group>"; };
+		0A4D796220D0EC9100FD4FB8 /* LLYFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYFileManager.h; sourceTree = "<group>"; };
+		0A4D796320D0EC9100FD4FB8 /* LLYFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYFileManager.m; sourceTree = "<group>"; };
+		0A4D796520D0EEE000FD4FB8 /* LLYEncryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYEncryption.h; sourceTree = "<group>"; };
+		0A4D796620D0EEE000FD4FB8 /* LLYEncryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYEncryption.m; sourceTree = "<group>"; };
 		0A694F482099AD9600694E35 /* LLYAudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLYAudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A694F4B2099AD9600694E35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A694F4C2099AD9600694E35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 		0A4D794A20D0CD5B00FD4FB8 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
+				0A4D796220D0EC9100FD4FB8 /* LLYFileManager.h */,
+				0A4D796320D0EC9100FD4FB8 /* LLYFileManager.m */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -242,6 +250,8 @@
 				0A4D795F20D0D60600FD4FB8 /* LLYPlayerViewController.xib */,
 				0A4D795A20D0D3A000FD4FB8 /* LLYHomeViewController.h */,
 				0A4D795B20D0D3A100FD4FB8 /* LLYHomeViewController.m */,
+				0A4D796520D0EEE000FD4FB8 /* LLYEncryption.h */,
+				0A4D796620D0EEE000FD4FB8 /* LLYEncryption.m */,
 				0A694F4E2099AD9600694E35 /* ViewController.h */,
 				0A694F4F2099AD9600694E35 /* ViewController.m */,
 				0A694F512099AD9600694E35 /* Main.storyboard */,
@@ -490,8 +500,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A694F502099AD9600694E35 /* ViewController.m in Sources */,
+				0A4D796720D0EEE000FD4FB8 /* LLYEncryption.m in Sources */,
 				0A4D795420D0CD5B00FD4FB8 /* LLYAudioProperty.m in Sources */,
 				0A4D795320D0CD5B00FD4FB8 /* LLYAudioPlayer.m in Sources */,
+				0A4D796420D0EC9100FD4FB8 /* LLYFileManager.m in Sources */,
 				0A4D795720D0CD5B00FD4FB8 /* LLYNetAudioSource.m in Sources */,
 				0A4D795820D0CD5B00FD4FB8 /* LLYAudioStream.m in Sources */,
 				0A694F5B2099AD9600694E35 /* main.m in Sources */,

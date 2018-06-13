@@ -14,13 +14,18 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - WCDB (1.0.6):
+    - WCDB/sqlcipher (= 1.0.6)
+  - WCDB/sqlcipher (1.0.6)
 
 DEPENDENCIES:
   - AFNetworking
+  - WCDB
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  WCDB: 4d2926bf695b2e00d785b50afd32c2dcc8cbbd98
 
-PODFILE CHECKSUM: afbb79a898f4e6bc6649838dd1d9cdcd47beff44
+PODFILE CHECKSUM: ebeb50166b2d58267be6a87c08c2cf024c7839fc
 
 COCOAPODS: 1.3.0

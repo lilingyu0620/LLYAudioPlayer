@@ -8,6 +8,8 @@
 
 #import "LLYPlayerViewController.h"
 #import "LLYAudioPlayer.h"
+#import "LLYFileManager.h"
+#import "LLYHttpSessionManager.h"
 
 
 @interface LLYPlayerViewController ()<LLYAudioPlayerDelegate>
@@ -41,7 +43,29 @@
     
     self.audioPlayer = [[LLYAudioPlayer alloc] init];
     self.audioPlayer.delegate = self;
-    [self.audioPlayer playWithUrl:self.playUrl];
+    
+    //先判断当前url是否已经缓存过
+    if ([LLYFileManager isFileExit:self.playUrl]) {
+        
+        //判断一下文件是否下载完了
+        [[LLYHttpSessionManager shareInstance] requestAUDIOWithMethod:LLYHttpMethod_HEAD urlString:self.playUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nullable task, id  _Nullable responseObject) {
+            int64_t contentExceptLength = task.countOfBytesExpectedToReceive;
+            unsigned long long fileSize = [LLYFileManager fileSizeWithFilePath:[LLYFileManager pathWithUrl:self.playUrl]];
+            if (fileSize >= contentExceptLength) {
+                //已下载完
+                self.playUrl = [LLYFileManager pathWithUrl:self.playUrl];
+                [self.audioPlayer playWithUrl:self.playUrl];
+            }
+            else{
+                [self.audioPlayer playWithUrl:self.playUrl];
+            }
+            
+        } failure:nil];
+        
+    }
+    else{
+        [self.audioPlayer playWithUrl:self.playUrl];
+    }
     
 }
 
