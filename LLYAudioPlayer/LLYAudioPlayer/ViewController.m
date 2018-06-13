@@ -82,7 +82,6 @@
     if (self.audioPlayer) {
         self.audioPlayer = nil;
     }
-    
     NSString *path = @"http://nos.netease.com/test-open-audio/nos/mp3/2018/04/17/ZDEMHSRKH_shd.mp3";
     self.audioPlayer = [[LLYAudioPlayer alloc] init];
     self.audioPlayer.delegate = self;

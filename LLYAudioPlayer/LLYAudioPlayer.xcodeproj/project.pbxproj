@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4D795220D0CD5B00FD4FB8 /* LLYAudioQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D793B20D0CD5B00FD4FB8 /* LLYAudioQueue.m */; };
+		0A4D795320D0CD5B00FD4FB8 /* LLYAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D793F20D0CD5B00FD4FB8 /* LLYAudioPlayer.m */; };
+		0A4D795420D0CD5B00FD4FB8 /* LLYAudioProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D794220D0CD5B00FD4FB8 /* LLYAudioProperty.m */; };
+		0A4D795520D0CD5B00FD4FB8 /* LLYBaseAudioSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D794520D0CD5B00FD4FB8 /* LLYBaseAudioSource.m */; };
+		0A4D795620D0CD5B00FD4FB8 /* LLYLocalAudioSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D794720D0CD5B00FD4FB8 /* LLYLocalAudioSource.m */; };
+		0A4D795720D0CD5B00FD4FB8 /* LLYNetAudioSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D794920D0CD5B00FD4FB8 /* LLYNetAudioSource.m */; };
+		0A4D795820D0CD5B00FD4FB8 /* LLYAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D794D20D0CD5B00FD4FB8 /* LLYAudioStream.m */; };
+		0A4D795920D0CD5B00FD4FB8 /* LLYHttpSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D795020D0CD5B00FD4FB8 /* LLYHttpSessionManager.m */; };
+		0A4D795C20D0D3A100FD4FB8 /* LLYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D795B20D0D3A100FD4FB8 /* LLYHomeViewController.m */; };
+		0A4D796020D0D60600FD4FB8 /* LLYPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D795E20D0D60600FD4FB8 /* LLYPlayerViewController.m */; };
+		0A4D796120D0D60600FD4FB8 /* LLYPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4D795F20D0D60600FD4FB8 /* LLYPlayerViewController.xib */; };
 		0A694F4D2099AD9600694E35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F4C2099AD9600694E35 /* AppDelegate.m */; };
 		0A694F502099AD9600694E35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F4F2099AD9600694E35 /* ViewController.m */; };
 		0A694F532099AD9600694E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A694F512099AD9600694E35 /* Main.storyboard */; };
@@ -15,16 +26,9 @@
 		0A694F5B2099AD9600694E35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F5A2099AD9600694E35 /* main.m */; };
 		0A694F652099AD9600694E35 /* LLYAudioPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F642099AD9600694E35 /* LLYAudioPlayerTests.m */; };
 		0A694F702099AD9600694E35 /* LLYAudioPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F6F2099AD9600694E35 /* LLYAudioPlayerUITests.m */; };
-		0A694F7F2099AF6F00694E35 /* LLYBaseAudioSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F7E2099AF6F00694E35 /* LLYBaseAudioSource.m */; };
-		0A694F822099AFB500694E35 /* LLYLocalAudioSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F812099AFB500694E35 /* LLYLocalAudioSource.m */; };
 		0A694F852099B0D300694E35 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A694F842099B0D300694E35 /* AudioToolbox.framework */; };
 		0A694F872099B0D900694E35 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A694F862099B0D900694E35 /* AVFoundation.framework */; };
-		0A694F8A2099B3B600694E35 /* LLYAudioProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694F892099B3B600694E35 /* LLYAudioProperty.m */; };
 		0A694F8E2099C19600694E35 /* LLYAudioError.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A694F8D2099C19600694E35 /* LLYAudioError.plist */; };
-		0A778EB4209C4E4C001F073D /* LLYNetAudioSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A778EB3209C4E4C001F073D /* LLYNetAudioSource.m */; };
-		0A79074C209AA24E004DAE36 /* LLYAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A79074B209AA24E004DAE36 /* LLYAudioStream.m */; };
-		0A79074F209ABCA5004DAE36 /* LLYAudioQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A79074E209ABCA5004DAE36 /* LLYAudioQueue.m */; };
-		0A790752209AF0D5004DAE36 /* LLYAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A790751209AF0D5004DAE36 /* LLYAudioPlayer.m */; };
 		0A790755209AFA7B004DAE36 /* 平凡之路.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A790754209AFA7B004DAE36 /* 平凡之路.mp3 */; };
 		F057AA6F8BF5076D29B25A6C /* libPods-LLYAudioPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2453C122BD76EE6203177F24 /* libPods-LLYAudioPlayer.a */; };
 /* End PBXBuildFile section */
@@ -47,6 +51,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A4D793A20D0CD5B00FD4FB8 /* LLYAudioQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLYAudioQueue.h; sourceTree = "<group>"; };
+		0A4D793B20D0CD5B00FD4FB8 /* LLYAudioQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLYAudioQueue.m; sourceTree = "<group>"; };
+		0A4D793E20D0CD5B00FD4FB8 /* LLYAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLYAudioPlayer.h; sourceTree = "<group>"; };
+		0A4D793F20D0CD5B00FD4FB8 /* LLYAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLYAudioPlayer.m; sourceTree = "<group>"; };
+		0A4D794020D0CD5B00FD4FB8 /* LLYAudioPlayerDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLYAudioPlayerDefine.h; sourceTree = "<group>"; };
+		0A4D794120D0CD5B00FD4FB8 /* LLYAudioProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLYAudioProperty.h; sourceTree = "<group>"; };
+		0A4D794220D0CD5B00FD4FB8 /* LLYAudioProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLYAudioProperty.m; sourceTree = "<group>"; };
+		0A4D794420D0CD5B00FD4FB8 /* LLYBaseAudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLYBaseAudioSource.h; sourceTree = "<group>"; };
+		0A4D794520D0CD5B00FD4FB8 /* LLYBaseAudioSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLYBaseAudioSource.m; sourceTree = "<group>"; };
+		0A4D794620D0CD5B00FD4FB8 /* LLYLocalAudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLYLocalAudioSource.h; sourceTree = "<group>"; };
+		0A4D794720D0CD5B00FD4FB8 /* LLYLocalAudioSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLYLocalAudioSource.m; sourceTree = "<group>"; };
+		0A4D794820D0CD5B00FD4FB8 /* LLYNetAudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLYNetAudioSource.h; sourceTree = "<group>"; };
+		0A4D794920D0CD5B00FD4FB8 /* LLYNetAudioSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLYNetAudioSource.m; sourceTree = "<group>"; };
+		0A4D794C20D0CD5B00FD4FB8 /* LLYAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLYAudioStream.h; sourceTree = "<group>"; };
+		0A4D794D20D0CD5B00FD4FB8 /* LLYAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLYAudioStream.m; sourceTree = "<group>"; };
+		0A4D794F20D0CD5B00FD4FB8 /* LLYHttpSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLYHttpSessionManager.h; sourceTree = "<group>"; };
+		0A4D795020D0CD5B00FD4FB8 /* LLYHttpSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLYHttpSessionManager.m; sourceTree = "<group>"; };
+		0A4D795A20D0D3A000FD4FB8 /* LLYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYHomeViewController.h; sourceTree = "<group>"; };
+		0A4D795B20D0D3A100FD4FB8 /* LLYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYHomeViewController.m; sourceTree = "<group>"; };
+		0A4D795D20D0D60600FD4FB8 /* LLYPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYPlayerViewController.h; sourceTree = "<group>"; };
+		0A4D795E20D0D60600FD4FB8 /* LLYPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYPlayerViewController.m; sourceTree = "<group>"; };
+		0A4D795F20D0D60600FD4FB8 /* LLYPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLYPlayerViewController.xib; sourceTree = "<group>"; };
 		0A694F482099AD9600694E35 /* LLYAudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLYAudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A694F4B2099AD9600694E35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A694F4C2099AD9600694E35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,25 +89,10 @@
 		0A694F6B2099AD9600694E35 /* LLYAudioPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLYAudioPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A694F6F2099AD9600694E35 /* LLYAudioPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAudioPlayerUITests.m; sourceTree = "<group>"; };
 		0A694F712099AD9600694E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A694F7D2099AF6F00694E35 /* LLYBaseAudioSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYBaseAudioSource.h; sourceTree = "<group>"; };
-		0A694F7E2099AF6F00694E35 /* LLYBaseAudioSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYBaseAudioSource.m; sourceTree = "<group>"; };
-		0A694F802099AFB500694E35 /* LLYLocalAudioSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYLocalAudioSource.h; sourceTree = "<group>"; };
-		0A694F812099AFB500694E35 /* LLYLocalAudioSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYLocalAudioSource.m; sourceTree = "<group>"; };
 		0A694F842099B0D300694E35 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0A694F862099B0D900694E35 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0A694F882099B3B600694E35 /* LLYAudioProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAudioProperty.h; sourceTree = "<group>"; };
-		0A694F892099B3B600694E35 /* LLYAudioProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAudioProperty.m; sourceTree = "<group>"; };
-		0A694F8B2099B68100694E35 /* LLYAudioPlayerDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAudioPlayerDefine.h; sourceTree = "<group>"; };
 		0A694F8C2099B72200694E35 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0A694F8D2099C19600694E35 /* LLYAudioError.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LLYAudioError.plist; sourceTree = "<group>"; };
-		0A778EB2209C4E4C001F073D /* LLYNetAudioSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYNetAudioSource.h; sourceTree = "<group>"; };
-		0A778EB3209C4E4C001F073D /* LLYNetAudioSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYNetAudioSource.m; sourceTree = "<group>"; };
-		0A79074A209AA24E004DAE36 /* LLYAudioStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAudioStream.h; sourceTree = "<group>"; };
-		0A79074B209AA24E004DAE36 /* LLYAudioStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAudioStream.m; sourceTree = "<group>"; };
-		0A79074D209ABCA5004DAE36 /* LLYAudioQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAudioQueue.h; sourceTree = "<group>"; };
-		0A79074E209ABCA5004DAE36 /* LLYAudioQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAudioQueue.m; sourceTree = "<group>"; };
-		0A790750209AF0D5004DAE36 /* LLYAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAudioPlayer.h; sourceTree = "<group>"; };
-		0A790751209AF0D5004DAE36 /* LLYAudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAudioPlayer.m; sourceTree = "<group>"; };
 		0A790754209AFA7B004DAE36 /* 平凡之路.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "平凡之路.mp3"; sourceTree = "<group>"; };
 		2453C122BD76EE6203177F24 /* libPods-LLYAudioPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LLYAudioPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6D51EBF7D9050F63C26499 /* Pods-LLYAudioPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLYAudioPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLYAudioPlayer/Pods-LLYAudioPlayer.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +127,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A4D793920D0CD5B00FD4FB8 /* AudioQueue */ = {
+			isa = PBXGroup;
+			children = (
+				0A4D793A20D0CD5B00FD4FB8 /* LLYAudioQueue.h */,
+				0A4D793B20D0CD5B00FD4FB8 /* LLYAudioQueue.m */,
+			);
+			path = AudioQueue;
+			sourceTree = "<group>";
+		};
+		0A4D793C20D0CD5B00FD4FB8 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		0A4D793D20D0CD5B00FD4FB8 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				0A4D793E20D0CD5B00FD4FB8 /* LLYAudioPlayer.h */,
+				0A4D793F20D0CD5B00FD4FB8 /* LLYAudioPlayer.m */,
+				0A4D794020D0CD5B00FD4FB8 /* LLYAudioPlayerDefine.h */,
+				0A4D794120D0CD5B00FD4FB8 /* LLYAudioProperty.h */,
+				0A4D794220D0CD5B00FD4FB8 /* LLYAudioProperty.m */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		0A4D794320D0CD5B00FD4FB8 /* AudioSource */ = {
+			isa = PBXGroup;
+			children = (
+				0A4D794420D0CD5B00FD4FB8 /* LLYBaseAudioSource.h */,
+				0A4D794520D0CD5B00FD4FB8 /* LLYBaseAudioSource.m */,
+				0A4D794620D0CD5B00FD4FB8 /* LLYLocalAudioSource.h */,
+				0A4D794720D0CD5B00FD4FB8 /* LLYLocalAudioSource.m */,
+				0A4D794820D0CD5B00FD4FB8 /* LLYNetAudioSource.h */,
+				0A4D794920D0CD5B00FD4FB8 /* LLYNetAudioSource.m */,
+			);
+			path = AudioSource;
+			sourceTree = "<group>";
+		};
+		0A4D794A20D0CD5B00FD4FB8 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		0A4D794B20D0CD5B00FD4FB8 /* AudioStream */ = {
+			isa = PBXGroup;
+			children = (
+				0A4D794C20D0CD5B00FD4FB8 /* LLYAudioStream.h */,
+				0A4D794D20D0CD5B00FD4FB8 /* LLYAudioStream.m */,
+			);
+			path = AudioStream;
+			sourceTree = "<group>";
+		};
+		0A4D794E20D0CD5B00FD4FB8 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				0A4D794F20D0CD5B00FD4FB8 /* LLYHttpSessionManager.h */,
+				0A4D795020D0CD5B00FD4FB8 /* LLYHttpSessionManager.m */,
+			);
+			path = NetManager;
+			sourceTree = "<group>";
+		};
+		0A4D795120D0CD5B00FD4FB8 /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DownloadManager;
+			sourceTree = "<group>";
+		};
 		0A694F3F2099AD9600694E35 = {
 			isa = PBXGroup;
 			children = (
@@ -141,25 +225,23 @@
 		0A694F4A2099AD9600694E35 /* LLYAudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				0A4D793D20D0CD5B00FD4FB8 /* AudioPlayer */,
+				0A4D793920D0CD5B00FD4FB8 /* AudioQueue */,
+				0A4D794320D0CD5B00FD4FB8 /* AudioSource */,
+				0A4D794B20D0CD5B00FD4FB8 /* AudioStream */,
+				0A4D793C20D0CD5B00FD4FB8 /* DBManager */,
+				0A4D795120D0CD5B00FD4FB8 /* DownloadManager */,
+				0A4D794A20D0CD5B00FD4FB8 /* FileManager */,
+				0A4D794E20D0CD5B00FD4FB8 /* NetManager */,
 				0A790753209AFA7B004DAE36 /* source */,
 				0A694F8D2099C19600694E35 /* LLYAudioError.plist */,
-				0A694F8B2099B68100694E35 /* LLYAudioPlayerDefine.h */,
-				0A694F882099B3B600694E35 /* LLYAudioProperty.h */,
-				0A694F892099B3B600694E35 /* LLYAudioProperty.m */,
-				0A694F7D2099AF6F00694E35 /* LLYBaseAudioSource.h */,
-				0A694F7E2099AF6F00694E35 /* LLYBaseAudioSource.m */,
-				0A694F802099AFB500694E35 /* LLYLocalAudioSource.h */,
-				0A694F812099AFB500694E35 /* LLYLocalAudioSource.m */,
-				0A778EB2209C4E4C001F073D /* LLYNetAudioSource.h */,
-				0A778EB3209C4E4C001F073D /* LLYNetAudioSource.m */,
-				0A79074A209AA24E004DAE36 /* LLYAudioStream.h */,
-				0A79074B209AA24E004DAE36 /* LLYAudioStream.m */,
-				0A79074D209ABCA5004DAE36 /* LLYAudioQueue.h */,
-				0A79074E209ABCA5004DAE36 /* LLYAudioQueue.m */,
-				0A790750209AF0D5004DAE36 /* LLYAudioPlayer.h */,
-				0A790751209AF0D5004DAE36 /* LLYAudioPlayer.m */,
 				0A694F4B2099AD9600694E35 /* AppDelegate.h */,
 				0A694F4C2099AD9600694E35 /* AppDelegate.m */,
+				0A4D795D20D0D60600FD4FB8 /* LLYPlayerViewController.h */,
+				0A4D795E20D0D60600FD4FB8 /* LLYPlayerViewController.m */,
+				0A4D795F20D0D60600FD4FB8 /* LLYPlayerViewController.xib */,
+				0A4D795A20D0D3A000FD4FB8 /* LLYHomeViewController.h */,
+				0A4D795B20D0D3A100FD4FB8 /* LLYHomeViewController.m */,
 				0A694F4E2099AD9600694E35 /* ViewController.h */,
 				0A694F4F2099AD9600694E35 /* ViewController.m */,
 				0A694F512099AD9600694E35 /* Main.storyboard */,
@@ -327,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A694F582099AD9600694E35 /* LaunchScreen.storyboard in Resources */,
+				0A4D796120D0D60600FD4FB8 /* LLYPlayerViewController.xib in Resources */,
 				0A694F552099AD9600694E35 /* Assets.xcassets in Resources */,
 				0A694F8E2099C19600694E35 /* LLYAudioError.plist in Resources */,
 				0A694F532099AD9600694E35 /* Main.storyboard in Resources */,
@@ -407,15 +490,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A694F502099AD9600694E35 /* ViewController.m in Sources */,
-				0A694F8A2099B3B600694E35 /* LLYAudioProperty.m in Sources */,
-				0A79074F209ABCA5004DAE36 /* LLYAudioQueue.m in Sources */,
-				0A790752209AF0D5004DAE36 /* LLYAudioPlayer.m in Sources */,
-				0A694F822099AFB500694E35 /* LLYLocalAudioSource.m in Sources */,
+				0A4D795420D0CD5B00FD4FB8 /* LLYAudioProperty.m in Sources */,
+				0A4D795320D0CD5B00FD4FB8 /* LLYAudioPlayer.m in Sources */,
+				0A4D795720D0CD5B00FD4FB8 /* LLYNetAudioSource.m in Sources */,
+				0A4D795820D0CD5B00FD4FB8 /* LLYAudioStream.m in Sources */,
 				0A694F5B2099AD9600694E35 /* main.m in Sources */,
-				0A79074C209AA24E004DAE36 /* LLYAudioStream.m in Sources */,
-				0A778EB4209C4E4C001F073D /* LLYNetAudioSource.m in Sources */,
-				0A694F7F2099AF6F00694E35 /* LLYBaseAudioSource.m in Sources */,
+				0A4D795220D0CD5B00FD4FB8 /* LLYAudioQueue.m in Sources */,
+				0A4D795520D0CD5B00FD4FB8 /* LLYBaseAudioSource.m in Sources */,
+				0A4D795920D0CD5B00FD4FB8 /* LLYHttpSessionManager.m in Sources */,
 				0A694F4D2099AD9600694E35 /* AppDelegate.m in Sources */,
+				0A4D795620D0CD5B00FD4FB8 /* LLYLocalAudioSource.m in Sources */,
+				0A4D795C20D0D3A100FD4FB8 /* LLYHomeViewController.m in Sources */,
+				0A4D796020D0D60600FD4FB8 /* LLYPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
