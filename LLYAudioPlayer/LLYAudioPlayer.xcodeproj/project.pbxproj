@@ -26,6 +26,7 @@
 		0A79074F209ABCA5004DAE36 /* LLYAudioQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A79074E209ABCA5004DAE36 /* LLYAudioQueue.m */; };
 		0A790752209AF0D5004DAE36 /* LLYAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A790751209AF0D5004DAE36 /* LLYAudioPlayer.m */; };
 		0A790755209AFA7B004DAE36 /* 平凡之路.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A790754209AFA7B004DAE36 /* 平凡之路.mp3 */; };
+		F057AA6F8BF5076D29B25A6C /* libPods-LLYAudioPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2453C122BD76EE6203177F24 /* libPods-LLYAudioPlayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,9 @@
 		0A790750209AF0D5004DAE36 /* LLYAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAudioPlayer.h; sourceTree = "<group>"; };
 		0A790751209AF0D5004DAE36 /* LLYAudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAudioPlayer.m; sourceTree = "<group>"; };
 		0A790754209AFA7B004DAE36 /* 平凡之路.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "平凡之路.mp3"; sourceTree = "<group>"; };
+		2453C122BD76EE6203177F24 /* libPods-LLYAudioPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LLYAudioPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA6D51EBF7D9050F63C26499 /* Pods-LLYAudioPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLYAudioPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLYAudioPlayer/Pods-LLYAudioPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		BD1F834FD013A178FB5EB3FA /* Pods-LLYAudioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLYAudioPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLYAudioPlayer/Pods-LLYAudioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			files = (
 				0A694F872099B0D900694E35 /* AVFoundation.framework in Frameworks */,
 				0A694F852099B0D300694E35 /* AudioToolbox.framework in Frameworks */,
+				F057AA6F8BF5076D29B25A6C /* libPods-LLYAudioPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +124,7 @@
 				0A694F6E2099AD9600694E35 /* LLYAudioPlayerUITests */,
 				0A694F492099AD9600694E35 /* Products */,
 				0A694F832099B0D200694E35 /* Frameworks */,
+				830D1F5CF9ACE89E3B0876BA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +195,7 @@
 			children = (
 				0A694F862099B0D900694E35 /* AVFoundation.framework */,
 				0A694F842099B0D300694E35 /* AudioToolbox.framework */,
+				2453C122BD76EE6203177F24 /* libPods-LLYAudioPlayer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,6 +208,15 @@
 			path = source;
 			sourceTree = "<group>";
 		};
+		830D1F5CF9ACE89E3B0876BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD1F834FD013A178FB5EB3FA /* Pods-LLYAudioPlayer.debug.xcconfig */,
+				BA6D51EBF7D9050F63C26499 /* Pods-LLYAudioPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A694F742099AD9600694E35 /* Build configuration list for PBXNativeTarget "LLYAudioPlayer" */;
 			buildPhases = (
+				12DC4F56D225E521D9944EA9 /* [CP] Check Pods Manifest.lock */,
 				0A694F442099AD9600694E35 /* Sources */,
 				0A694F452099AD9600694E35 /* Frameworks */,
 				0A694F462099AD9600694E35 /* Resources */,
+				CE0A2B7182BD2E2CD650F6B4 /* [CP] Embed Pods Frameworks */,
+				877B906311423B3FEC9C79C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,6 +349,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12DC4F56D225E521D9944EA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LLYAudioPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		877B906311423B3FEC9C79C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLYAudioPlayer/Pods-LLYAudioPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE0A2B7182BD2E2CD650F6B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLYAudioPlayer/Pods-LLYAudioPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A694F442099AD9600694E35 /* Sources */ = {
@@ -506,12 +576,14 @@
 		};
 		0A694F752099AD9600694E35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD1F834FD013A178FB5EB3FA /* Pods-LLYAudioPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PW2BL84NY9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LLYAudioPlayer/PrefixHeader.pch";
 				INFOPLIST_FILE = LLYAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lly.LLYAudioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,12 +593,14 @@
 		};
 		0A694F762099AD9600694E35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA6D51EBF7D9050F63C26499 /* Pods-LLYAudioPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PW2BL84NY9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LLYAudioPlayer/PrefixHeader.pch";
 				INFOPLIST_FILE = LLYAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lly.LLYAudioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
