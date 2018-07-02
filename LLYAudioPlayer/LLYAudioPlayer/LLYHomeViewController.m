@@ -27,7 +27,7 @@
     
     self.title = @"LLYAudioPlayer";
     
-    self.dataSourceArray = @[@"http://nos.netease.com/test-open-audio/nos/mp3/2018/04/17/ZDEMIAA6S_shd.mp3",
+    self.dataSourceArray = @[@"http://nos.netease.com/test-open-audio/nos/mp3/2018/04/17/ZDEMIFS5C_shd.mp3",
                              @"http://nos.netease.com/test-open-audio/nos/mp3/2018/04/17/ZDEMHSRKH_shd.mp3"];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
